@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Countries</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/HomeC2.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700&display=swap" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class='header'>
+        <div class="continer">
+            <div class="menu">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/country">Countries</a></li>
+                </ul>
+            </div>
+            <div class="logo">
+                <a href="/">
+                    <div class="menu-open"><i class="fa-solid fa-bars"></i></div>
+                    <h1>W<span>o</span>rldClube</h1>
+                </a>
+            </div>
+            <div class='button'>
+                <a href="/account/sign_in/" class="sign-in">Login</a>
+                <a href="/account/sign_up/" class="sign-up">Sign up</a>
+            </div>
+        </div>
+    </div>
+    {% load static %}
+    <div class='top-img'><img src=" {% static 'img/3.png'  %}   " /></div>
+    <div class="continer">
+        <h3 class="title">Find Country to know</h3>
+        <div>
+            {% for x in people %}
+            {% if x.image %}
+            <div class="countrys">
+                <div class="country">
+                    <a href="{% url 'index' id=x.id %}"><img src="{{x.image.url}}" /></a>
+                    <a href="{% url 'index' id=x.id %}">
+                        <h4 class="contryT">{{x.name}}</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {%endif%}
+    {%endfor%}
+    <footer>
+        <div class="continer">
+            <img src="{% static 'img/26.png' %}" class="footer-img" />
+        </div>
+        <h2>WorldClube</h2>
+        <div class='soc'>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+    <script>
+        $(function () {
+            $(".menu-open").click(function () {
+                $("body").toggleClass("open-active");
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<h1>hi</h1>
+
+<p>{{ food.name }}</p>
+<p>{{ food.description }}</p>
+
+<p>{{ event.name }}</p>
+<p>{{ event.description }}</p>
+
+
+
+<p>{{ custom.name }}</p>
+<p>{{ custom.description }}</p>
+
+
+<p>{{ people.name }}</p>
+
+<p>{{ people.description }}</p>
+
+{% if people.image %}
+<p><img src="{{people.image.url}}" alt=""></p>
+
+{% endif %}
+
+

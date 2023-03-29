@@ -1,0 +1,180 @@
+:-webkit-scrollbar {
+  width: 5px;
+  height: 7px;
+  background: #fff;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb {
+  background: #01233e;
+  border-radius: 3px;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-color: #fff;
+}
+img {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+  color: #112211;
+}
+.logo h1 {
+  margin: 0;
+  font-size: 25px;
+}
+.logo h1 span {
+  color: #8dd3bb;
+}
+.header {
+  padding: 0 15px;
+  background: #fff;
+}
+.header .contine {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px 0 25px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.menu ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.menu ul li a {
+  margin-right: 15px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.sign-up {
+  background: #8dd3bbb0;
+  margin-left: 5px;
+}
+.button a {
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.menu-open {
+  display: none;
+}
+.continer {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.img-con {
+  margin-left: 80px;
+}
+.txt-con h3 {
+  margin: 0;
+  font-size: 35px;
+}
+.pr {
+  color: #112211;
+  margin: 5px 0 25px;
+}
+.divInput {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+}
+input {
+  outline: 0;
+  max-width: 100%;
+  border: 1px solid #79747e;
+  margin: 10px 0 15px;
+  padding: 15px 8px;
+  box-sizing: border-box;
+  font-size: 14px;
+  display: block;
+  border-radius: 3px;
+  position: relative;
+}
+label {
+  position: absolute;
+  z-index: 10;
+  margin-left: 15px;
+  background: #fff;
+  padding: 0 2px;
+  font-size: 14px;
+}
+.txt-con {
+  max-width: 450px;
+  width: 100%;
+}
+.log-button {
+  background: #8dd3bb;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+.message a {
+  color: #ff8682;
+  text-decoration: none;
+}
+.message {
+  text-align: center;
+  font-size: 15px;
+}
+@media only screen and (max-width: 920px) {
+  logo h1 {
+    font-size: 20px;
+  }
+  .img-con {
+    display: none;
+  }
+  .continer {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+  .txt-con {
+    text-align: center;
+  }
+  .menu {
+    display: none;
+  }
+  .menu-open {
+    margin-right: 7px;
+    font-size: 25px;
+    display: block;
+  }
+  .open-active .menu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .button a {
+    padding: 5px 8px;
+  }
+  .open-active .menu ul li a {
+    padding: 5px 0;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    display: block;
+  }
+  .open-active .menu {
+    display: block;
+    width: 150px;
+    background: #fff;
+    overflow: hidden;
+    position: absolute;
+    left: 10px;
+    top: 58px;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    z-index: 99999999;
+  }
+  .logo {
+    display: flex;
+  }
+}
